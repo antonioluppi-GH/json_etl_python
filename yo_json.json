@@ -1,0 +1,23 @@
+{
+    "nombre": "Antonio",
+    "apellido": "Luppi",
+    "dni": "32078161",
+    "vestimenta": [
+        {
+            "prenda": "sombrero",
+            "cantidad": "1"
+        },
+        {
+            "prenda": "camisa",
+            "cantidad": "3"
+        },
+        {
+            "prenda": "pantal\u00f3n",
+            "cantidad": "2"
+        },
+        {
+            "prenda": "medias",
+            "cantidad": "5"
+        }
+    ]
+}

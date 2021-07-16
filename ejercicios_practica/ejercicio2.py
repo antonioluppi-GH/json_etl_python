@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 import json
+
 import requests
 
 import matplotlib.pyplot as plt
@@ -46,4 +47,25 @@ if __name__ == '__main__':
     # y verifique si los primeros usuarios (mirando la página a ojo)
     # los datos recolectados son correctos.
 
+    response = requests.get("https://jsonplaceholder.typicode.com/todos")
+    
+    data = response.json()
+
+    usuarios = range(1, 11)
+
+    complet_abs = [x.get('userId') for x in data if x['completed'] == True]
+    
+    final_list = [complet_abs.count(i) for i in usuarios]
+    
+    print(final_list)
+    
+    fig = plt.figure()
+    fig.suptitle('títulos completados')
+    ax = fig.add_subplot()
+    ax.bar(usuarios, final_list)
+    ax.set_xlabel('user Id')
+    ax.set_ylabel('títulos')
+    plt.show()
+
+    
     print("terminamos")
